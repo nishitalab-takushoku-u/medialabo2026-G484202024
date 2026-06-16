@@ -1,0 +1,20 @@
+body {
+    background-color: linen;
+    color: saddlebrown;
+}
+
+h1 {
+    color: firebrick;
+    border-bottom: 1px solid firebrick;
+}
+
+h2 {
+    color: chocolate;
+    font-size: 16px;
+}
+
+h3 {
+    background-color: antiquewhite;
+    border: 1px solid darkorange;
+}
+

@@ -1,0 +1,27 @@
+body{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+h1{
+    color:white;
+    text-shadow: 1px 0 10px green;
+}
+
+body{
+    background-color: white;
+}
+
+h2{
+    background:linear-gradient(to right,#65e5a7 ,white);
+}
+
+div#all{
+    display:flex;
+}
+
+h3{
+    color:white;
+    background-color: #48d7fe;
+}
