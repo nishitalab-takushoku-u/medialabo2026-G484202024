@@ -8,11 +8,15 @@
     <script src="kazuate.js" defer></script>
   </head>
 
-　　<body>
+  <body>
     <h1>数当てゲーム</h1>
     <p>
-        <span id="kaisu">1</span>回目の予想: 
+      <label for="yosou">1から10の間の整数:</label>
+      <input name="yosou" id="yosou" size="3">
+      <button id="kai">回答</button>
+      
+    </p>    
         <!-- ここにテキストボックスとボタンを設置 -->
-    </p>
+    <p><span id="kaisu"></span><span>回目の予想: </span><span id="answer"></span></p>
     <p id="result">ここに判定結果を表示します</p>
 </html>
