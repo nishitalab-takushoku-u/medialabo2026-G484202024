@@ -9,7 +9,11 @@
 </head>
 <body>
     <h1>グルメ情報</h1>
-    <p>検索キー:<input type="text"><button>検索</button></p>
+    <p>
+        <label for="key">検索キー:</label>
+        <input type="search" name="key" id="key" placeholder="キーワードを入力">
+        <button onclick="kensaku()">検索</button>
+    </p>
     <h2>八王子エリアの グルメ 検索結果(２件)</h2>
     <h3>検索結果:1件目</h3>
     <table border="1">
@@ -89,5 +93,6 @@
             <th>ダイニングバー・バル</th>
         </tr>
     </table>
+    <script src="project.js"></script>
 </body>
 </html>
