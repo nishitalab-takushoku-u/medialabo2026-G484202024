@@ -19,7 +19,53 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let div = document.createElement('div');
+  div.setAttribute('id', 'result');
+  let body = document.querySelector('body');
+  body.insertAdjacentElement('beforeend', div);
 
+  let span = document.querySelector('#span');
+  if (span) {
+      span.textContent = data.results.shop.length;
+  }
+
+  let shops = data.results.shop;
+  for (let i = 0; i < shops.length; i++) {
+      let s = shops[i];
+
+      let h3 = document.createElement('h3');
+      div.insertAdjacentElement('beforeend', h3);
+      h3.textContent = `検索結果:${i + 1}件目`;
+
+      let table = document.createElement('table');
+      table.setAttribute('border', '1');
+      div.insertAdjacentElement('beforeend', table);
+
+      let n = [
+          ['名前', s.name],
+          ['アクセス', s.access],
+          ['住所', s.address],
+          ['予算', s.budget ? s.budget.name : ''],
+          ['キャッチコピー', s.catch],
+          ['ジャンル', s.genre ? s.genre.name : ''],
+          ['営業時間', s.open],
+          ['最寄駅', s.station_name],
+          ['サブジャンル', s.sub_genre ? s.sub_genre.name : '']
+      ];
+
+      for (let item of n) {
+          let tr = document.createElement('tr');
+          table.insertAdjacentElement('beforeend', tr);
+
+          let th = document.createElement('th');
+          tr.insertAdjacentElement('beforeend', th);
+          th.textContent = item[0];
+
+          let td = document.createElement('td');
+          tr.insertAdjacentElement('beforeend', td);
+          td.textContent = item[1];
+      }
+  }
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
